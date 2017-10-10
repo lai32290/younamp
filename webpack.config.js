@@ -7,12 +7,10 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist/js"),
-        publicPath: "./dist"
+        publicPath: "/js/"
     },
     devServer: {
-        host: "localhost",
-        port: "5000",
-        contentBase: "./dist"
+        contentBase: path.resolve(__dirname, "dist")
     },
     module: {
         loaders: [
