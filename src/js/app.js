@@ -1,6 +1,9 @@
+import "font-awesome/css/font-awesome.css";
+import "../css/app.scss";
 import ReactDOM from "react-dom";
+import App from "./pages/App.jsx";
 
 ReactDOM.render(
-    <h1>Hello World</h1>,
+    <App />,
     document.getElementById("root")
 );

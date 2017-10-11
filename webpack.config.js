@@ -1,6 +1,7 @@
 var path = require("path");
 var webpack = require("webpack");
 var CopyWebpackPlugin = require("copy-webpack-plugin");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: "./src/js/app.js",
@@ -18,6 +19,14 @@ module.exports = {
                 test: /\.jsx?$/,
                 loader: "babel-loader",
                 exclude: /node_modules/
+            },
+            {
+                test: /\.scss$/,
+                use: [ "style-loader", "css-loader", "sass-loader" ]
+            },
+            {
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "file-loader"
             }
         ]
     },
@@ -27,6 +36,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             { from: "./src/index.html", to: path.resolve(__dirname, "dist/index.html") }
-        ])
+        ]),
+        new ExtractTextPlugin("bundle.css")
     ]
 };
