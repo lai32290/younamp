@@ -24,8 +24,10 @@
   },
   "dependencies": {
     "bulma": "^0.6.0",
+    "bulma-loader": "^1.0.1",
     "font-awesome": "^4.7.0",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "url-loader": "^0.6.2"
   }
 }
