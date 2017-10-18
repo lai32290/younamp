@@ -1,6 +1,7 @@
 import { Component } from "react";
 import ListItem from "./PlayListItem.jsx";
 import autobind from "autobind";
+import { List } from 'semantic-ui-react'
 
 class PlayList extends Component {
     @autobind
@@ -9,14 +10,10 @@ class PlayList extends Component {
     }
 
     render() {
-        return <ul className="play-list menu-list">
-            <ListItem onClick={this.selectMusic}>Music 1</ListItem>
-            <ListItem>Music 1</ListItem>
-            <ListItem>Music 1</ListItem>
-            <ListItem>Music 1</ListItem>
-            <ListItem>Music 1</ListItem>
-            <ListItem>Music 1</ListItem>
-        </ul>;
+        return <List link>
+                <ListItem onClick={this.selectMusic}>Music 1</ListItem>
+                <ListItem onClick={this.selectMusic}>Music 1</ListItem>
+            </List>
     }
 }
 

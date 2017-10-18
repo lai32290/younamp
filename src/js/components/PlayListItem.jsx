@@ -1,5 +1,6 @@
 import { Component } from "react";
 import autobind from "autobind";
+import { List } from 'semantic-ui-react'
 
 class PlayListItem extends Component {
     @autobind
@@ -9,7 +10,7 @@ class PlayListItem extends Component {
         onClick();
     }
     render() {
-        return <li onClick={this.onClick}><a>{this.props.children}</a></li>
+        return <List.Item onClick={this.onClick} className="play-list-item">{this.props.children}</List.Item>
     }
 }
 

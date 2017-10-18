@@ -1,9 +1,10 @@
 import { Component } from "react";
+import { Button } from 'semantic-ui-react'
 
 class ControlButton extends Component {
     render() {
         const { children } = this.props;
-        return <button className="button is-primary">{children}</button>
+        return <Button color="purple" compact>{children}</Button>
     }
 }
 
